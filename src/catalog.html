@@ -1,0 +1,55 @@
+<%- include('partials/layout-start', { title: 'Prompts catalog', description: 'Browse, search and filter AI prompts.', page: 'catalog' }) %>
+  <main id="main" class="page page--catalog">
+    <header class="page__header">
+      <h1 class="page__title" data-i18n="catalog.title">Prompts catalog</h1>
+      <p class="page__lead" data-i18n="catalog.lead">Find a prompt for your task.</p>
+    </header>
+    <div class="catalog">
+      <aside class="filters" aria-labelledby="filters-title">
+        <h2 class="filters__title" id="filters-title" data-i18n="catalog.filters">Filters</h2>
+        <form class="filters__form" action="catalog.html" method="get" role="search" aria-label="Filter prompts">
+          <div class="form-field">
+            <label class="form-field__label" for="f-search" data-i18n="form.search">Search</label>
+            <input class="form-field__input" id="f-search" name="q" type="search" placeholder="e.g. SEO" data-i18n-attr="placeholder:form.searchPh">
+          </div>
+          <div class="form-field">
+            <label class="form-field__label" for="f-model" data-i18n="form.model">Model</label>
+            <select class="form-field__input" id="f-model" name="model">
+              <option value="">All models</option><option value="chatgpt">ChatGPT</option><option value="claude">Claude</option><option value="midjourney">Midjourney</option>
+            </select>
+          </div>
+          <fieldset class="form-fieldset">
+            <legend class="form-fieldset__legend" data-i18n="form.tags">Tags</legend>
+            <% ['Copywriting','SEO','Coding','Education','Email'].forEach((t, i) => { %>
+            <p class="form-check"><input class="form-check__input" id="tag-<%= i %>" name="tag" type="checkbox" value="<%= t.toLowerCase() %>"><label class="form-check__label" for="tag-<%= i %>"><%= t %></label></p>
+            <% }) %>
+          </fieldset>
+          <p class="form-check"><input class="form-check__input" id="f-cheap" name="cheap" type="checkbox"><label class="form-check__label" for="f-cheap">Under $5</label></p>
+          <button class="button button--primary" type="submit" data-i18n="form.apply">Apply filters</button>
+        </form>
+      </aside>
+
+      <section class="results" aria-labelledby="results-title">
+        <h2 class="visually-hidden" id="results-title">Search results</h2>
+        <div class="results__toolbar">
+          <p class="results__count" role="status"><%= prompts.length %> prompts found</p>
+          <label class="form-field__label" for="sort" data-i18n="form.sort">Sort by</label>
+          <select class="form-field__input" id="sort" name="sort" form="filters-sort">
+            <option value="popular">Popular</option><option value="price-asc">Price: low to high</option><option value="rating">Top rated</option>
+          </select>
+        </div>
+        <ul class="prompt-list">
+          <% prompts.forEach(p => { %><li class="prompt-list__item"><%- include('partials/prompt-card', { p }) %></li><% }) %>
+        </ul>
+        <nav class="pagination" aria-label="Pagination">
+          <ul class="pagination__list">
+            <li class="pagination__item"><a class="pagination__link" href="catalog.html?page=1" aria-current="page" aria-label="Page 1, current page">1</a></li>
+            <li class="pagination__item"><a class="pagination__link" href="catalog.html?page=2" aria-label="Page 2">2</a></li>
+            <li class="pagination__item"><a class="pagination__link" href="catalog.html?page=2" rel="next" data-i18n="pagination.next">Next</a></li>
+          </ul>
+        </nav>
+      </section>
+    </div>
+    <form id="filters-sort" action="catalog.html" method="get" hidden></form>
+  </main>
+<%- include('partials/layout-end') %>

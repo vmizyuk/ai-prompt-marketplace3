@@ -1,0 +1,16 @@
+<%# param: p (prompt) %>
+<article class="prompt-card">
+  <figure class="prompt-card__media">
+    <%- include('picture', { name: p.img, alt: 'Cover illustration for the prompt ' + p.title, sizes: '(min-width: 1280px) 400px, (min-width: 768px) 33vw, 100vw' }) %>
+  </figure>
+  <div class="prompt-card__body">
+    <p class="prompt-card__tag"><%= p.tag %></p>
+    <h3 class="prompt-card__title"><a class="prompt-card__link" href="prompt.html?id=<%= p.id %>"><%= p.title %></a></h3>
+    <p class="prompt-card__author">by <%= p.author %></p>
+    <p class="prompt-card__rating"><span class="visually-hidden" data-i18n="card.rated">Rated</span> <data value="<%= p.rating %>"><%= p.rating %></data> out of 5 (<%= p.reviews %> reviews)</p>
+    <footer class="prompt-card__footer">
+      <data class="prompt-card__price" value="<%= p.price %>">$<%= p.price.toFixed(2) %></data>
+      <button class="button button--small" type="button" data-add-to-cart="<%= p.id %>" aria-label="Add <%= p.title %> to cart" data-i18n="card.add">Add to cart</button>
+    </footer>
+  </div>
+</article>
