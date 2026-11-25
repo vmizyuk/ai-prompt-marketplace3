@@ -1,0 +1,131 @@
+.page--catalog {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 24px 16px 64px;
+}
+
+.page--catalog .page__header {
+  margin-bottom: 32px;
+}
+
+.page--catalog .page__title {
+  margin: 0 0 8px;
+  font-size: 2.25rem;
+}
+
+.page--catalog .page__lead {
+  margin: 0;
+  color: #4b5563;
+  font-size: 1.0625rem;
+}
+
+.page--catalog .catalog {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 32px;
+  align-items: start;
+}
+
+@media (min-width: 900px) {
+  .page--catalog .catalog {
+    grid-template-columns: 280px 1fr;
+  }
+}
+
+.page--catalog .filters {
+  padding: 20px;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  background: #ffffff;
+}
+
+.page--catalog .filters__title {
+  margin: 0 0 16px;
+  font-size: 1.25rem;
+}
+
+.page--catalog .filters__form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.page--catalog .form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.page--catalog .form-field__input {
+  padding: 8px 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+}
+
+.page--catalog .form-fieldset {
+  margin: 0;
+  padding: 12px 0 0;
+  border: 0;
+  border-top: 1px solid #f3f4f6;
+}
+
+.page--catalog .form-fieldset__legend {
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.page--catalog .form-check {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 6px 0;
+}
+
+.page--catalog .results__toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.page--catalog .results__count {
+  margin: 0 auto 0 0;
+  font-weight: 500;
+}
+
+.page--catalog .prompt-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 20px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.page--catalog .pagination {
+  margin-top: 40px;
+}
+
+.page--catalog .pagination__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.page--catalog .pagination__link {
+  display: inline-block;
+  padding: 8px 14px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  text-decoration: none;
+}
+
+.page--catalog .pagination__link[aria-current="page"] {
+  background: #111827;
+  color: #ffffff;
+  border-color: #111827;
+}
