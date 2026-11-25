@@ -1,0 +1,140 @@
+.page--cart {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 24px 16px 64px;
+}
+
+.page--cart .page__title {
+  margin: 0 0 28px;
+  font-size: 2.25rem;
+}
+
+.page--cart .checkout {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 32px;
+  align-items: start;
+}
+
+@media (min-width: 1024px) {
+  .page--cart .checkout {
+    grid-template-columns: 1.4fr 0.9fr;
+  }
+
+  .page--cart .contact {
+    grid-column: 1 / -1;
+  }
+}
+
+.page--cart .cart,
+.page--cart .summary,
+.page--cart .contact {
+  padding: 24px;
+  border: 1px solid #e5e7eb;
+  border-radius: 14px;
+  background: #ffffff;
+}
+
+.page--cart .cart__title,
+.page--cart .summary__title,
+.page--cart .contact__title {
+  margin: 0 0 16px;
+  font-size: 1.25rem;
+}
+
+.page--cart .cart-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.page--cart .cart-table th,
+.page--cart .cart-table td {
+  padding: 12px 10px;
+  border-bottom: 1px solid #e5e7eb;
+  text-align: left;
+  vertical-align: middle;
+}
+
+.page--cart .cart-table__tag {
+  font-size: 0.8125rem;
+  color: #6b7280;
+  font-weight: 400;
+}
+
+.page--cart .cart-table .form-field__input {
+  width: 76px;
+  padding: 6px 8px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+}
+
+.page--cart .summary__list {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.page--cart .summary__row {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.page--cart .summary__row dt,
+.page--cart .summary__row dd {
+  margin: 0;
+}
+
+.page--cart .summary__row--total {
+  padding-top: 12px;
+  border-top: 1px solid #e5e7eb;
+  font-weight: 700;
+  font-size: 1.125rem;
+}
+
+.page--cart .checkout-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  max-width: 640px;
+}
+
+.page--cart .form-fieldset {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.page--cart .form-fieldset__legend {
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.page--cart .form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.page--cart .form-field__input {
+  padding: 10px 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+}
+
+.page--cart .form-check {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0;
+}
+
+.page--cart .checkout-form__note {
+  margin: 0;
+  font-size: 0.875rem;
+  color: #4b5563;
+}

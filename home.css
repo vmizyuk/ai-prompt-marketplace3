@@ -1,0 +1,128 @@
+.page--home {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 24px 16px 64px;
+}
+
+.page--home .hero {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 32px;
+  align-items: center;
+  padding: 32px 0;
+}
+
+@media (min-width: 1024px) {
+  .page--home .hero {
+    grid-template-columns: 1.15fr 0.85fr;
+    gap: 48px;
+    padding: 48px 0;
+  }
+}
+
+.page--home .hero__title {
+  margin: 0 0 16px;
+  font-size: clamp(2rem, 4vw, 3rem);
+  line-height: 1.15;
+}
+
+.page--home .hero__text {
+  margin: 0 0 24px;
+  font-size: 1.125rem;
+  line-height: 1.6;
+  color: #4b5563;
+}
+
+.page--home .hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin: 0;
+}
+
+.page--home .hero__media {
+  margin: 0;
+}
+
+.page--home .hero__media img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 16px;
+}
+
+.page--home .section {
+  margin-top: 56px;
+}
+
+.page--home .section__title {
+  margin: 0 0 24px;
+  font-size: 1.75rem;
+}
+
+.page--home .prompt-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 24px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.page--home .section__more {
+  margin-top: 24px;
+}
+
+.page--home .features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 20px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.page--home .feature {
+  padding: 20px;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  background: #ffffff;
+}
+
+.page--home .feature__title {
+  margin: 0 0 8px;
+  font-size: 1.125rem;
+}
+
+.page--home .feature__text {
+  margin: 0;
+  color: #4b5563;
+  line-height: 1.5;
+}
+
+.page--home .newsletter {
+  margin-top: 56px;
+  padding: 32px 24px;
+  border-radius: 16px;
+  background: #f9fafb;
+  border: 1px solid #e5e7eb;
+}
+
+.page--home .newsletter__title {
+  margin: 0 0 16px;
+  font-size: 1.5rem;
+}
+
+.page--home .newsletter__form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: end;
+}
+
+.page--home .newsletter__form .form-field__input {
+  flex: 1 1 240px;
+  padding: 10px 14px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+}
