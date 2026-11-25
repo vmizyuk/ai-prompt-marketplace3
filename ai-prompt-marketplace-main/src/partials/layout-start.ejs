@@ -1,0 +1,12 @@
+<%# params: title, description, page %>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title><%= title %> | AI Prompt Marketplace</title>
+  <meta name="description" content="<%= description %>">
+</head>
+<body class="page-<%= page %>">
+  <a class="skip-link" href="#main" data-i18n="a11y.skip">Skip to main content</a>
+  <%- include('header', { page }) %>
