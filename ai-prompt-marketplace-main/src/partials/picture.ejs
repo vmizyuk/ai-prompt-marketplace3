@@ -1,5 +1,0 @@
-<%# params: name, alt, sizes, eager (optional) %>
-<picture class="picture">
-  <source type="image/webp" sizes="<%= sizes %>" srcset="assets/img/<%= name %>-400.webp 400w, assets/img/<%= name %>-800.webp 800w, assets/img/<%= name %>-1200.webp 1200w">
-  <img class="picture__img" src="assets/img/<%= name %>-800.jpg" sizes="<%= sizes %>" srcset="assets/img/<%= name %>-400.jpg 400w, assets/img/<%= name %>-800.jpg 800w, assets/img/<%= name %>-1200.jpg 1200w" alt="<%= alt %>" width="1200" height="800" loading="<%= locals.eager ? 'eager' : 'lazy' %>">
-</picture>
